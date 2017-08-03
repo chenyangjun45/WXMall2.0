@@ -1,0 +1,68 @@
+<!--fullReduction.wxml-->
+<import src="../../templates/loaderTemplate.wxml"/>
+<view class="all">
+  <view class="interval"></view>
+  <view>
+    <image class="headImg" src="../../../images/fullReduction.png"></image>
+  </view>
+  <view class="interval"></view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item">
+      <text class="info1">满减券:</text>
+    </view>
+    <view class="flex-item">
+      <text class="info2">{{full_reduction_name}}</text>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="introduce">
+    <view class="title">
+      <text>有效期</text>
+    </view>
+    <view class="para">
+      <rich-text nodes="{{term_of_validity}}"></rich-text>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="introduce">
+    <view class="title">
+      <text>使用条件</text>
+    </view>
+    <view class="para">
+      <rich-text nodes="{{condition}}"></rich-text>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="introduce">
+    <view class="title">
+      <text>说明</text>
+    </view>
+    <view class="para">
+      <rich-text nodes="{{illustrate}}"></rich-text>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="fullReduction">
+    <view class="count">
+      <text>数量</text>
+    </view>
+    <view class="count reduce" bindtap="reduceOne">
+      <text>-</text>
+    </view>
+    <view class="count number">
+      <text>{{count}}</text>
+    </view>
+    <view class="count add" bindtap="addOne">
+      <text>+</text>
+    </view>
+    <view class="count integral">
+      <text>{{allPoints}}</text>
+      <text class="integral_des">积分</text>
+    </view>
+  </view>
+  <button class="button" bindtap="exchange">立即兑换</button>
+  <modal hidden="{{hidden}}" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    确定使用{{allPoints}}积分兑换{{count}}张？
+  </modal>
+  <template is="loaderTemplate"  data="{{hideLoader}}"></template>
+</view>

@@ -1,0 +1,65 @@
+// pages/member/member.js
+Page({
+
+   data: {
+      member: {
+         img: "images/user1.png",
+         name: "爱吃鱼罐头",
+         Grade: 4,
+         level: "白金会员",
+         QRCode: "kdcurry334455",
+         integral: "506000",
+         favorable: "5",
+         balance: "22.00"
+      }
+   },
+
+   /**
+    * 生命周期函数--监听页面加载
+    */
+   onLoad: function (options) {
+   },
+   /**
+    *页面实现跳转 
+    */
+   myinter: function () {
+      wx.navigateTo({
+         url: '../../pages/store/',
+      })
+   },
+   bindtapPersonageMessage:function(){
+     wx.navigateTo({
+       url:'../store/personageMessage/personageMessage',
+     })
+   },
+   bindtapIntegral:function(){
+     wx.navigateTo({
+       url: '../store/integral/integral',
+     })
+   },
+   bindtapMyCoupon:function(){
+     wx.navigateTo({
+       url: '../store/coupon/coupon',
+     })
+   },
+   bindtapMemberPrivilege:function(){
+     wx.navigateTo({
+       url: '../store/memberPrivilege/memberPrivilege',
+     })
+   },
+   bindtapBirthday:function(){
+     wx.navigateTo({
+       url: '../store/birthday/birthday',
+     })
+   },
+   bindtapIntegralStore:function(){
+     wx.navigateTo({
+       url: '../store/integralStore/integralStore',
+     })
+   },
+   bindtapCoupon:function(){
+     wx.navigateTo({
+       url: '../store/coupon/coupon',
+     })
+   },
+})

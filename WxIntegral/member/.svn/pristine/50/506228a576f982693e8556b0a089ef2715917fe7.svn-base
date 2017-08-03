@@ -1,0 +1,34 @@
+<!--pages/register/register.wxml-->
+<view class="container">
+<view class="inteval"></view>
+<view class="inputModule">
+<text class="text" >{{teltext}}</text>
+<input class="telinput" value="{{telnumber}}"
+style="width:{{inputwidth}}rpx"
+bindinput="bindTelInput"
+ placeholder="请输入手机号" />
+<block wx:if="{{telinputnumber!=''}}">
+      <image bindtap="closetel" class="closetelimg" src="../../../images/close1.png"></image>
+</block>
+<block wx:if="{{getbuttonshow==true}}">
+<button class="button_before" bindtap="getVerification">
+{{buttontext}}</button>
+</block>
+<block wx:if="{{timebuttonshow==true}}">
+<button class="button_after" >{{time}}s</button>
+</block>
+</view>
+<view class="inteval2"></view>
+<view class="inputModule">
+<text class="text">{{valitext}}</text>
+<input class="valinput" placeholder="请输入验证码"
+bindinput="bindVerInput" value="{{vernumber}}" />
+<block wx:if="{{verinputnumber!=''}}">
+      <image bindtap="closever" class="closeverimg" src="../../../images/close1.png"></image>
+</block>
+</view>
+<view class="inteval"></view>
+<view class="tips">{{tips}}</view>
+<button class=" buttondisabled {{telinputnumber!=''?'button_r':''}}" bindtap="register">确定</button>
+
+</view>

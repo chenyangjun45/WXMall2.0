@@ -1,0 +1,146 @@
+// pages/component/personageMessage/personageMessage.js
+var sourceType = [['camera'], ['album'], ['camera', 'album']]
+var sizeType = [['compressed'], ['original'], ['compressed', 'original']]
+Page({
+
+   /**
+    * 页面的初始数据
+    */
+  data: {
+    hideLoader: false,
+     userImage: "../../../images/user.png",
+      nickname: '爱吃鱼罐头',
+      male: '男',
+      birthday: '2017-07-07',
+      numberPlate: '鄂A00000',
+      address: '湖北省武汉市',
+      otherInformation: '羽毛球、篮球',
+
+      //
+      imageList: [],
+      sourceTypeIndex: 2,
+      sourceType: ['拍照', '相册', '拍照或相册'],
+
+      sizeTypeIndex: 2,
+      sizeType: ['压缩', '原图', '压缩或原图'],
+   },
+   sourceTypeChange: function (e) {
+      this.setData({
+         sourceTypeIndex: e.detail.value
+      })
+   },
+   sizeTypeChange: function (e) {
+      this.setData({
+         sizeTypeIndex: e.detail.value
+      })
+   },
+   countChange: function (e) {
+      this.setData({
+         countIndex: e.detail.value
+      })
+   },
+   chooseImage: function () {
+      var that = this
+      wx.chooseImage({
+         count: 1,
+         sourceType: sourceType[this.data.sourceTypeIndex],
+         sizeType: sizeType[this.data.sizeTypeIndex],
+         success: function (res) {
+            console.log(res)
+            that.setData({
+               userImage: res.tempFilePaths
+            })
+         }
+      })
+   },
+   disappear:function(){
+     this.setData({
+       hideLoader:true,
+     })
+   },
+   setBirth: function () {
+      wx.navigateTo({
+        url: '../../user/setBirthday/setBirthday?V_birthday=' + this.data.birthday,
+         complete: function (res) {
+            console.log(res)
+         }
+      })
+   }, 
+   setMale: function () {
+     wx.navigateTo({
+       url: '../../user/setGender/setGender?V_male=' + this.data.male,
+       complete: function (res) {
+         console.log(res)
+       }
+     })
+   }, 
+   setCar: function () {
+     wx.navigateTo({
+       url: '../../user/setCardNo/setCardNo?V_numberPlate=' + this.data.numberPlate,
+       complete: function (res) {
+         console.log(res)
+       }
+     })
+   }, 
+   setNick: function () {
+     wx.navigateTo({
+       url: '../../user/nicknameChange/nicknameChange?V_nickname=' + this.data.nickname,
+       complete: function (res) {
+         console.log(res)
+       }
+     })
+   }, 
+   /**
+    * 生命周期函数--监听页面加载
+    */
+   onLoad: function (options) {
+   },
+
+   /**
+    * 生命周期函数--监听页面初次渲染完成
+    */
+   onReady: function () {
+
+   },
+
+   /**
+    * 生命周期函数--监听页面显示
+    */
+   onShow: function () {
+   },
+
+   /**
+    * 生命周期函数--监听页面隐藏
+    */
+   onHide: function () {
+
+   },
+
+   /**
+    * 生命周期函数--监听页面卸载
+    */
+   onUnload: function () {
+
+   },
+
+   /**
+    * 页面相关事件处理函数--监听用户下拉动作
+    */
+   onPullDownRefresh: function () {
+
+   },
+
+   /**
+    * 页面上拉触底事件的处理函数
+    */
+   onReachBottom: function () {
+
+   },
+
+   /**
+    * 用户点击右上角分享
+    */
+   onShareAppMessage: function () {
+
+   }
+})

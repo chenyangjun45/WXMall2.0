@@ -1,0 +1,141 @@
+<view class="member" style="opacity:{{num}}">
+   <view class="middle">
+      <view class="mem" bindtap="bindtapPersonageMessage">
+         <image class="img" src="../../images/user.png"/>
+         <view class="user">
+            <view class="user-name">{{member.name}}</view>
+            <view class="user-type">{{member.level}}</view>
+         </view>
+         <image class="right" mode="aspectFit" src="../../images/angleRight.png"/>
+      </view>
+   </view>
+
+  <!--会员二维码  -->
+   <view class="middle menu" bindtap="powerDrawer" data-statu="open">
+      <image class="front-img" src="../../images/member1.png" mode="aspectFit"></image>
+      <view class="member-num">
+         <text>会员二维码</text>
+      </view>
+      <image class="right" mode="aspectFit" src="../../images/angleRight.png"/>
+   </view>
+
+   <view class="interval"></view>
+
+  <!--我的积分 我的优惠 会员卡余额  -->
+   <view class="middle">
+      <view class="member-my" bindtap="bindtapIntegral">
+         <view class="code">
+            <view style="color: #ff4081;">{{member.integral}}分</view>
+            <view class="inter">我的积分</view>
+         </view>
+      </view>
+      <view class="member-my" bindtap="bindtapMyCoupon">
+         <view class="code">
+            <view style="color: #03B050;">5个</view>
+            <view class="inter">我的优惠</view>
+         </view>
+      </view>
+      <view class="member-my">
+         <view class="code">
+            <view style="color: #2196F3;">0.00元</view>
+            <view class="inter">会员卡余额</view>
+         </view>
+      </view>
+   </view>
+
+   <view class="interval"></view>
+
+  <!--会员等级和权益  -->
+   <view class="middle menu" bindtap="bindtapMemberPrivilege">
+      <image class="image-hv" mode="aspectFit" src="../../images/member4.png"/>
+      <view class="member-left">我的特权</view>
+      <view class="member-right">
+         <text>会员等级和权益</text>
+      </view>
+      <image class="right" mode="aspectFit" src="../../images/angleRight.png"/>
+   </view>
+
+   <!--免费停车 生日礼遇 新品体验 积分通享  -->
+   <view class="middle privilege">
+      <view class="member-priv">
+         <image class="image" src="../../images/member7.png"></image>
+         <view class="priv">免费停车</view>
+      </view>
+      <view class="member-priv" bindtap="bindtapBirthday">
+         <image class="image" src="../../images/member8.png"></image>
+         <view class="priv">生日礼遇</view>
+      </view>
+      <view class="member-priv">
+         <image class="image" src="../../images/member9.png"></image>
+         <view class="priv">新品体验</view>
+      </view>
+      <view class="member-priv">
+         <image class="image" src="../../images/member10.png"></image>
+         <view class="priv">积分通享</view>
+      </view>
+   </view>
+
+   <view class="interval"></view>
+
+   <!--积分商城 领券中心  -->
+   <view class="middle-menu" bindtap="bindtapIntegralStore" style="flex-direction:row;">
+      <view class="scoreLeft">
+        <image class="left" mode="aspectFit" src="../../images/member2.png"/>
+        <view class="mem-store">积分商城</view>
+      </view>
+      <view class="rightContent" style="flex-direction:row;">
+        <image class="right" style="flex-direction:row;" mode="aspectFit" src="../../images/angleRight.png"/>
+      </view>     
+   </view>
+
+   <view class="interval2"></view>
+
+   <view class="middle-menu" bindtap="bindtapCoupon" style="flex-direction:row;">
+      <view class="scoreLeft">
+        <image class="left" mode="aspectFit" src="../../images/member6.png"/>
+        <view class="mem-store">领券中心</view>
+      </view>
+      <view class="rightContent" style="flex-direction:row;">
+        <image class="right" style="flex-direction:row;" mode="aspectFit" src="../../images/angleRight.png"/>
+      </view>   
+    </view>
+
+   <view class="interval"></view>
+
+  <!--意见反馈 设置  -->
+   <view class="middle-menu"  style="flex-direction:row;">
+      <view class="scoreLeft">
+        <image class="left" mode="aspectFit" src="../../images/member5.png"/>
+        <view class="mem-store">意见反馈</view>
+      </view>
+      <view class="rightContent" style="flex-direction:row;">
+        <image class="right" style="flex-direction:row;" mode="aspectFit" src="../../images/angleRight.png"/>
+      </view>     
+   </view>
+
+  <view class="interval2"></view>
+
+   <view class="middle-menu" style="flex-direction:row;">
+      <view class="scoreLeft">
+        <image class="left" mode="aspectFit" src="../../images/member3.png"/>
+        <view class="mem-store">设置</view>
+      </view>
+      <view class="rightContent" style="flex-direction:row;">
+        <image class="right" style="flex-direction:row;" mode="aspectFit" src="../../images/angleRight.png"/>
+      </view>     
+   </view>
+   <view class="interval"></view>
+</view>
+
+
+
+
+<!--使用animation属性指定需要执行的动画-->
+<view class="drawer_box"  animation="{{animationData}}" 
+  wx:if="{{showModalStatus}}">
+    <image class="topImg" mode="aspectFit" src="../../images/barCode.png"/>
+    <view class="mem-store">卡号：2015112632</view>
+    <image class="midImg" mode="aspectFit" src="../../images/qrCode.png"/>
+    <view class="recommend" >将此二维码展示给工作人员,立享优惠</view>
+    <image class="cancel" bindtap="powerDrawer" data-statu="close" mode="aspectFit" src="../../images/close1.png"/>
+</view>

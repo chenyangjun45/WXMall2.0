@@ -1,0 +1,162 @@
+/* pages/component/integral/integral.wxss */
+
+.contain {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   box-sizing: border-box;
+}
+
+.index {
+   background-color: #dedede;
+   width: 100%;
+   height: 410rpx;
+   display: block;
+}
+
+.regular {
+   width: 150rpx;
+   height: 60rpx;
+   font-size: 28rpx;
+   margin-top: 20rpx;
+   margin-right: 30rpx;
+   float: right;
+   line-height: 60rpx;
+   text-align: center;
+   display: flex;
+}
+
+.image-hv {
+   width: 30rpx;
+   height: 30rpx;
+   margin-top: 15rpx;
+   text-align: center;
+}
+
+.regular-text {
+   text-align: center;
+}
+
+.title {
+   height: 60rpx;
+   line-height: 60rpx;
+   font-size: 28rpx;
+   text-align: center;
+   clear: both;
+}
+
+.num {
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 50rpx;
+   text-align: center;
+   color: #f9a033;
+}
+
+.message {
+   display: flex;
+}
+
+.integral {
+   flex: 1;
+   height: 30rpx;
+   line-height: 30rpx;
+   font-size: 26rpx;
+   padding: 0 16rpx;
+   margin: 20rpx 0;
+}
+
+.left {
+   text-align: right;
+   border-right: 1px solid #626262;
+}
+
+.btn {
+   width: 400rpx;
+   height: 80rpx;
+   line-height: 80rpx;
+   text-align: center;
+   font-size: 30rpx;
+   margin: 20rpx auto;
+   background-color: #00a0e9;
+   color: #fff;
+   border-radius: 8rpx;
+   border: none;
+   outline: none;
+}
+
+.bt {
+   background-color: #939393;
+}
+
+.integral-message {
+   top: 410rpx;
+   width: 100%;
+}
+
+.scroll-content {
+   width: 100%;
+   height: 700rpx;
+   overflow: auto;
+}
+
+.flex {
+   width: 100%;
+   display: flex;
+   bottom: 0;
+   overflow: auto;
+   text-align: center;
+   flex-direction: column;
+}
+
+.list {
+   height: 135rpx;
+   line-height: 130rpx;
+   border-bottom: 1rpx solid #eee;
+   display: flex;
+   font-size: 28rpx;
+   text-align: center;
+}
+
+.flex-item {
+   width: 140rpx;
+}
+
+.flex-detail {
+   width: 300rpx;
+}
+.flex-line{
+   height: 50rpx;
+}
+.swiper-tab {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+
+.tab-item {
+   height: 80rpx;
+   line-height: 80rpx;
+   text-align: center;
+   font-size: 36rpx;
+   box-sizing: border-box;
+   flex: 1;
+}
+
+.on {
+   color: #50afff;
+   border-bottom: 5rpx solid #50afff;
+   height: 80rpx;
+   line-height: 80rpx;
+   text-align: center;
+   font-size: 36rpx;
+   box-sizing: border-box;
+   flex: 1;
+}
+
+.swiper {
+   min-height: 100%;
+}

@@ -1,0 +1,172 @@
+.member {
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   bottom: 0;
+   background-color: #fff;
+   overflow: auto !important;
+}
+
+.middle {
+   display: flex;
+   border-bottom: 1rpx solid #eee;
+   box-sizing: border-box;
+   width: 100%;
+}
+
+.mem {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.img {
+   width: 100rpx;
+   height: 100rpx;
+   padding-left: 20rpx;
+   border-radius: 50rpx;
+   margin: 50rpx 0;
+   display: block;
+}
+
+.user {
+   margin-left: 30rpx;
+   flex: 1;
+}
+
+.user-name {
+   height: 50rpx;
+   line-height: 50rpx;
+   margin-top: 55rpx;
+   color: #626262;
+   font-weight: 600;
+   font-size: 30rpx;
+}
+
+.user-type {
+   height: 40rpx;
+   line-height: 40rpx;
+   font-size: 26rpx;
+   margin-bottom: 55rpx;
+   color: #c3c3c3;
+}
+
+.front-img{
+  width: 50rpx;
+  height: 50rpx;
+  padding-left: 20rpx;
+  align-self: center;
+}
+
+.right {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 15rpx;
+  align-self: center;
+}
+
+.member-right {
+  flex: 1;
+   position: relative; 
+  text-align: right;
+   padding-right: 10rpx;  
+} 
+
+.menu {
+   height: 95rpx;
+   line-height: 85rpx;
+   font-size: 28rpx;
+   padding-left: 20rpx;
+}
+
+.member-num {
+   position: relative;
+   padding-left: 8px;
+}
+
+.interval {
+   width: 100%;
+   height: 20rpx;
+   background-color: #eee;
+}
+
+.member-my {
+   border-right: 1rpx solid #eee;
+   text-align: center;
+   flex: 1;
+   position: relative;
+}
+
+.code {
+   height: 95rpx;
+   line-height: 50rpx;
+   font-size: 30rpx;
+   margin-top: 20rpx;
+}
+
+.inter {
+   display: block;
+   height: 40rpx;
+   line-height: 40rpx;
+   font-size: 26rpx;
+   margin-bottom: 30rpx;
+}
+
+.member-hv {
+   position: relative;
+   width: 45rpx;
+   height: 45rpx;
+   align-self: center;
+   padding-left: 60rpx;
+   flex: 1;
+   background: url(../../images/member4.png) no-repeat left center;
+}
+
+.image-hv{
+   width: 50rpx;
+   height: 50rpx;
+   padding-left: 20rpx;
+   align-self: center;
+}
+
+.privilege {
+   padding: 0;
+}
+
+.member-priv {
+   border-right: 1rpx solid #eee; 
+   flex: 1;
+   flex-direction: column;
+   position: relative;
+}
+
+.member-left{
+  margin-left: 10rpx;
+  align-self: center;
+}
+.image {
+   display: block;
+   width: 80rpx;
+   height: 80rpx;
+   margin: 20rpx auto 0;
+}
+
+.priv {
+   height: 40rpx;
+   line-height: 40rpx;
+   font-size: 26rpx;
+   text-align: center;
+   margin: 10rpx 0;
+}
+
+.mem-store {
+   position: relative;
+   padding-left: 10rpx;
+   flex: 1;
+}
+.left{
+   width: 60rpx;
+   height: 60rpx;
+   padding-left: 15rpx;
+   align-self: center;
+}

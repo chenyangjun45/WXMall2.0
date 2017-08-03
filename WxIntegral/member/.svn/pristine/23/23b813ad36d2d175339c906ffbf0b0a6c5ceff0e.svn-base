@@ -1,0 +1,47 @@
+<!--pages/user/setBirthday/setBirthday.wxml-->
+<view class="birthContent">
+  <view class="divice"></view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <text class="textRight">生日：</text>
+    <view class="rightContent" style="flex-direction:row;">
+      <text class="textLeft" bindtap="choseDate">{{birthday}}</text>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="divice"></view>
+  <view class="Contents">
+    <text class="textTips">{{tips}}</text>
+
+    <view class="divice1"></view>
+    <button class="sureBtn" bindtap="btn_sure">确定</button>
+  </view>
+</view>
+<view class="hideView">
+<view class="datePicker" hidden="{{pickerHidden}}">
+  <view class="date0">{{year}}-{{month}}-{{day}}</view>
+  <view class="dateView">
+    <text class="textDate">年</text>
+    <text class="textDate">月</text>
+    <text class="textDate">日</text>
+  </view>
+  <picker-view class="dateView" indicator-style="height: 90rpx;" style="width: 100%; height: 300rpx;" value="{{value}}" bindchange="bindChange">
+    <picker-view-column class="column">
+      <view wx:for="{{years}}" class="columnView">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column class="column">
+      <view wx:for="{{months}}" class="columnView">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column class="column">
+      <view wx:for="{{days}}" class="columnView">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+  <view class="btnView">
+    <text class="btnPicker" bindtap="confirm0">确定</text>
+    <view class="hLine"></view>
+    <text class="btnPicker" bindtap="btn_today">今天</text>
+    <view class="hLine"></view>
+    <text class="btnPicker" bindtap="cancel0">取消</text>
+  </view>
+</view>
+<view class="shade" hidden="{{pickerHidden}}"></view>
+</view>

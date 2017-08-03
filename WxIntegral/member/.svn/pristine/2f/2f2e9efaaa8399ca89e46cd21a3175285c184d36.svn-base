@@ -1,0 +1,29 @@
+<!--pages/setCardNo/setCardNo.wxml-->
+
+<view class="container">
+  <view class="inteval"></view>
+  <view class="inputModule">
+    <text class="cardtext">{{cardNo}}</text>
+    <text class="region">{{region}}</text>
+    <input class="cardinput" type="text" value="{{cardnumber}}" bindinput="bindValueInput" placeholder="请输入车牌号码" />
+    <block wx:if="{{inputValue!=''}}">
+      <image bindtap="close" class="closeimg" src="../../images/close1.png"></image>
+    </block>
+  </view>
+
+  <view class="inteval"></view>
+  <text class="tips">{{tips}}</text>
+ 
+    <button class=" buttondisabled {{inputValue!=''?'button':''}}"   bindtap="{{inputValue!=''?'cardNoSubmit':''}}">确定</button>
+ 
+ 
+  <view class="city-choose">
+
+    <view wx:for-items="{{citylist}}" wx:key="allcity" wx:for-index="idx" class="city-grid {{currentID==idx?'ischecked':''}}" data-abbrname="{{item.abbrname}}" data-cityname="{{item.cityname}}" data-idx="{{idx}}" bindtap="bindCity">
+      <view class=" lable abbrname-lable">{{item.abbrname}}</view>
+      <view class="lable cityname-lable">{{item.cityname}}</view>
+    </view>
+
+
+  </view>
+</view>

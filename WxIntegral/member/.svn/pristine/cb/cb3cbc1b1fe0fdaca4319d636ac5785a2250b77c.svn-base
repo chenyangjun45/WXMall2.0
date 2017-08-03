@@ -1,0 +1,101 @@
+<!--pages/store/integral1/integral1.wxml-->
+<!-- <view class="index-hd">
+   <view class="flex-integral" style="flex-direction:row;">
+      <view class="flex-detail">
+         积分明细
+      </view>
+      <view class="flex-choose" bindtap="onChangeShowState" style="flex-direction:row;">
+         筛选<text class="choose-right{{showView?choose-show:''}}"></text>
+
+      </view>
+   </view>
+
+   <view class="interval"></view>
+   <view class="integral">
+      <view class="integral-hide{{showView?integral-show:''}}">
+         <view class="integral-title">选择积分类型</view>
+         <view style="color:{{color}};border-color:{{color}};" bindtap="onChangeColor" wx:for="{{integralType}}" wx:for-item="integralTypeItem" wx:key="integralTypeItem" class="integral-item" data-keyword="{{integralTypeItem}}">
+            {{integralTypeItem}}
+         </view>
+         <view class="interval"></view>
+         <view class="integral-title">选择收支方式</view>
+         <view style="color:{{color}};border-color:{{color}};" bindtap="onChangeColor" wx:for="{{payment}}" wx:for-item="paymentItem" wx:key="paymentItem" class="integral-item" data-keyword="{{integralItem}}">
+            {{paymentItem}}
+         </view>
+         <button class="btn">确定</button>
+      </view>
+   </view>
+   <view class="flex" wx:for="{{integralDetail}}" wx:for-item="item" wx:key="integralDetailItem">
+      <view class="list">
+         <view class="flex-item">{{item.time}}</view>
+         <view class="flex-details">{{item.money}}</view>
+         <view class="flex-item">{{item.forType}}</view>
+         <view class="flex-item">{{item.getNum}}</view>
+      </view>
+   </view>
+</view> -->
+<view class="contain">
+   <view class="index">
+      <view class="regular">积分规则</view>
+      <view class="title">我的积分</view>
+      <view class="num">{{num}}</view>
+      <view class="message">
+         <view class="integral left">快过期积分：{{quick}}分</view>
+         <view class="integral">未生效积分：{{unuse}}分</view>
+      </view>
+      <button class="btn">进入积分商城</button>
+   </view>
+   <view class="integral-message">
+      <view class="message">
+         <view class="message-left">
+            <view class="first-child">0</view>
+            <view class="second-child">餐饮积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">影院积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">购物积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">餐饮积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">购物积分</view>
+         </view>
+      </view>
+      <view class="interval"></view>
+      <view class="message">
+         <view class="message-detail">积分明细</view>
+         <view class="message-choose">
+            筛选<text class="choose-right"></text>
+         </view>
+      </view>
+   </view>
+   <view class="integral-filtrate" style="display:none">
+      <view class="message">
+         <view class="message-detail">积分明细</view>
+         <view class="message-choose">
+            筛选<text class="choose-show"></text>
+         </view>
+      </view>
+      <view class="message-list">
+         <view class="integral-type">选择积分类型</view>
+         <view style="color:{{color}};border-color:{{color}};" bindtap="onChangeColor" wx:for="{{integralType}}" wx:for-item="integralTypeItem" wx:key="integralTypeItem" class="integral-item" data-keyword="{{integralTypeItem}}">
+            {{integralTypeItem}}
+         </view>
+      </view>
+      <view class="message-list boder-none">
+         <view class="integral-type">选择收支方式</view>
+         <view class="" style="color:{{color}};border-color:{{color}};" bindtap="onChangeColor" wx:for="{{payment}}" wx:for-item="paymentItem" wx:key="paymentItem" class="integral-item" data-keyword="{{integralItem}}">
+            {{paymentItem}}
+         </view>
+      </view>
+      <button class="btn">确定</button>
+   </view>
+   <view class="shade" style="display:none"></view>
+</view>

@@ -1,0 +1,264 @@
+/* pages/store/integral1/integral1.wxss */
+
+.contain {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   box-sizing: border-box;
+}
+
+.index {
+   background-color: #dedede;
+   width: 100%;
+   height: 410rpx;
+   display: block;
+   position: absolute;
+}
+
+.regular {
+   width: 150rpx;
+   height: 60rpx;
+   font-size: 28rpx;
+   margin-top: 20rpx;
+   margin-right: 30rpx;
+   float: right;
+   line-height: 60rpx;
+   text-align: center;
+   display: flex;
+}
+
+.image-hv {
+   width: 30rpx;
+   height: 30rpx;
+   margin-top: 15rpx;
+   text-align: center;
+}
+
+.regular-text {
+   text-align: center;
+}
+
+/* .regular {
+   margin-left: 10rpx;
+   align-self: center;
+}  */
+
+.title {
+   height: 60rpx;
+   line-height: 60rpx;
+   font-size: 28rpx;
+   text-align: center;
+   clear: both;
+}
+
+.num {
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 50rpx;
+   text-align: center;
+   color: #f9a033;
+}
+
+.message {
+   display: flex;
+}
+
+.integral {
+   flex: 1;
+   height: 30rpx;
+   line-height: 30rpx;
+   font-size: 26rpx;
+   padding: 0 16rpx;
+   margin: 20rpx 0;
+}
+
+.left {
+   text-align: right;
+   border-right: 1px solid #626262;
+}
+
+.btn {
+   width: 400rpx;
+   height: 80rpx;
+   line-height: 80rpx;
+   text-align: center;
+   font-size: 30rpx;
+   margin: 20rpx auto;
+   background-color: #00a0e9;
+   color: #fff;
+   border-radius: 8rpx;
+   border: none;
+   outline: none;
+}
+
+.integral-message {
+   position: absolute;
+   top: 410rpx;
+   bottom: 0;
+   width: 100%;
+}
+
+.interval {
+   height: 20rpx;
+   width: 100%;
+   background-color: #eee;
+   border: 1rpx solid #eee;
+}
+
+.message-left {
+   padding-left: 0;
+   color: #50afff;
+   border-bottom: 4rpx solid #50afff;
+   height: 110rpx;
+   line-height: 80rpx;
+   text-align: center;
+   font-size: 28rpx;
+   font-weight: 600;
+   flex: 1;
+}
+
+.first-child {
+   height: 60rpx;
+   line-height: 60rpx;
+   color: #f9a033 !important;
+}
+
+.second-child {
+   height: 40rpx;
+   line-height: 40rpx;
+   font-size: 26rpx;
+}
+
+.message-other {
+   height: 110rpx;
+   line-height: 80rpx;
+   text-align: center;
+   font-size: 28rpx;
+   font-weight: 600;
+   border-bottom: 1rpx solid #eee;
+   box-sizing: border-box;
+   flex: 1;
+}
+
+.message-detail {
+   text-align: left;
+   padding-left: 24rpx;
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 28rpx;
+   font-weight: 600;
+   border-bottom: 1rpx solid #eee;
+   box-sizing: border-box;
+   flex: 1;
+}
+
+.message-choose {
+   text-align: right;
+   padding-right: 24rpx;
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 28rpx;
+   font-weight: 600;
+   border-bottom: 1rpx solid #eee;
+   box-sizing: border-box;
+   flex: 1;
+}
+
+.choose-show {
+   overflow: hidden;
+   border-width: 15rpx;
+   border-color: transparent transparent #50afff transparent;
+   border-style: dotted dotted solid dotted;
+   margin-top: 15rpx;
+   margin-left: 5rpx;
+   float: right;
+   text-align: center;
+}
+
+.choose-right {
+   overflow: hidden;
+   border-width: 13rpx;
+   border-color: #dedede transparent transparent transparent;
+   border-style: solid dotted dotted dotted;
+   margin-top: 30rpx;
+   margin-left: 5rpx;
+   float: right;
+   text-align: center;
+}
+
+.integral-filtrate {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 110;
+   background-color: #fff;
+}
+
+.message-list {
+   margin: 0 24rpx;
+   padding-bottom: 20rpx;
+   border-bottom: 1rpx solid #eee;
+}
+
+.integral-type {
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 28rpx;
+}
+
+.shade {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: #000;
+   opacity: 0.3;
+}
+
+.boder-none {
+   border: none !important;
+}
+
+.integral-item {
+   width: 128rpx;
+   display: inline-block;
+   padding: 10rpx;
+   border: 1rpx solid #ccc;
+   border-radius: 0rpx;
+   background-color: #fff;
+   margin: 0 20rpx 30rpx 0;
+   font-size: 32rpx;
+   color: #626262;
+   flex: 1;
+}
+
+.integral-choose {
+   width: 128rpx;
+   display: inline-block;
+   padding: 10rpx;
+   border: 1rpx solid #50afff;
+   border-radius: 0rpx;
+   background-color: #fff;
+   margin: 0 20rpx 30rpx 0;
+   font-size: 32rpx;
+   color: #50afff;
+   flex: 1;
+}
+
+.show {
+   display: block;
+}
+
+.show-none {
+   display: none;
+}
+
+.bt {
+   background-color: #939393;
+}

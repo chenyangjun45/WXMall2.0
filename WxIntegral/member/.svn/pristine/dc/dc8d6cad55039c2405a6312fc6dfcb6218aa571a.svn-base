@@ -1,0 +1,71 @@
+// pages/component/integral/integral.js
+Page({
+
+   /**
+    * 页面的初始数据
+    */
+   data: {
+      currentTab: 0,
+      num: '506000',
+      integralDetail: [
+         {
+            time: '07:01',
+            money: '5000',
+            tipNum: '45678765',
+            forType: '购物积分',
+            getNum: '+500'
+         }, {
+            time: '07:01',
+            money: '5000',
+            tipNum: '45678765',
+            forType: '购物积分',
+            getNum: '+500'
+         }, {
+            time: '07:01',
+            money: '5000',
+            tipNum: '45678765',
+            forType: '购物积分',
+            getNum: '+500'
+         }, {
+            time: '07:01',
+            money: '5000',
+            tipNum: '45678765',
+            forType: '购物积分',
+            getNum: '+500'
+         }, {
+            time: '07:01',
+            money: '5000',
+            tipNum: '45678765',
+            forType: '购物积分',
+            getNum: '+500'
+         }
+      ]
+   },
+
+   /**
+    * 生命周期函数--监听页面加载
+    */
+   onLoad: function (options) {
+
+   },
+
+   swichNav: function (e) {
+      console.log(e);
+      var that = this;
+      if (this.data.currentTab === e.target.dataset.current) {
+         return false;
+      } else {
+         that.setData({
+            currentTab: e.target.dataset.current,
+         })
+      }
+   },
+   swiperChange: function (e) {
+      console.log(e);
+      this.setData({
+         currentTab: e.detail.current,
+      })
+
+   },
+
+})

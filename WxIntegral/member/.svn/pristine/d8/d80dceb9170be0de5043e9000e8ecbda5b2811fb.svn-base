@@ -1,0 +1,53 @@
+<!--pages/store/integralRule/integralRule.wxml-->
+<view class="contain">
+
+  <!--问题1  -->
+  <view class="rule">
+    <view class="title">
+      <text>Q1：会员等级和积分的关系？</text>
+    </view>
+    <view class="answer">
+      <text>1、会员等级和积分成对应关系，只要积分达到过等级标准，即可自动成为该等级会员；</text>
+    </view>
+    <view class="content">
+      <text>1000积分=普通会员   2000积分=白银会员\n</text>
+      <text>3000积分=普通会员   4000积分=白银会员\n</text>
+      <text>10000积分=普通会员</text>
+    </view>
+    <view class="answer">
+      <text>2、会员周期：每一年会重新判定会员等级，因此在下一年记得再稳固一下会员等级哦 ～</text>
+    </view>
+    <view class="interval"></view>
+  </view>
+
+  <!--问题2  -->
+   <view class="rule">
+    <view class="title">
+      <text>Q2：如何获取会员积分？</text>
+    </view>
+    <view class="answer">
+      <text>1、每天最高获得5000积分；\n</text>
+      <text>2、充值或者消费金额（元）按照1:1转化为积分；\n</text>
+      <text>3、参加活动获得对应经验值；\n</text>
+      <text>3、参加活动获得对应经验值；\n</text>
+      <text>* 注：具体活动能获得的经验值数据根据具体活动内容决定，有疑问请联系商家</text>
+    </view>
+     <view class="interval"></view>
+  </view>
+
+   <!--问题3  -->
+   <view class="rule">
+    <view class="title">
+      <text>Q3：积分如何使用？</text>
+    </view>
+    <view class="answer">
+      <text>1、可在积分商城兑换优惠券；\n</text>
+      <text>2、可在积分商城兑换优惠券。\n</text>
+    </view>
+    <view class="interval"></view>
+  </view>
+
+  <view class="none">
+    <text>想知道更多只能去问店家啦</text>
+  </view>
+</view>

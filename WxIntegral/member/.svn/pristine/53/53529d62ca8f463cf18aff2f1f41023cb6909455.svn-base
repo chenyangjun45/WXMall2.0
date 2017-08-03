@@ -1,0 +1,64 @@
+/* pages/component/personageMessage/personageMessage.wxss */
+.flex-wrp {
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  border-bottom: 2rpx solid #eee;
+}
+
+.userContent {
+  height: 100%;
+  width: 100%;
+}
+
+.leftContent {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rightContent {
+  color: #c3c3c3;
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.userImage {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 80rpx;
+  display: block;
+  float: right;
+}
+
+.textRight {
+  font-size: 40rpx;
+  overflow: hidden;
+  white-space: nowrap; /* 不换行 */
+  text-align: right;
+}
+
+.textLeft {
+  align-content: center;
+  align-self: left;
+  text-align: center;
+  display: inline-block;
+}
+
+.divice {
+  height: 20rpx;
+  width: 100%;
+  background-color: #eee;
+}
+
+.rightRaw {
+  height: 50rpx;
+  width: 30rpx;
+  align-self: center;
+  padding-left: 20rpx;
+}

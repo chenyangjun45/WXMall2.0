@@ -1,0 +1,164 @@
+<!--pages/store/myCoupon/myCoupon.wxml-->
+<view class="container">
+<view class="inteval"></view>
+ <view class="swiper-tab">  
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部优惠券</view>  
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">满减券</view>  
+    <view class="tab-item {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">打折券</view> 
+    <view class="tab-item {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">抵时券</view>  
+    <view class="tab-item {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">抽奖券</view>   
+  </view> 
+
+ <!--全部优惠券内容主体-->  
+    <view class="view1" hidden="{{currentTab!=0}}">
+    <scroll-view scroll-y="true" style="height: 900rpx"
+    class="coupon_content" >
+   
+      <view wx:for-items="{{allcouponlist}}"  wx:key="allcoupon"  class="coupon-list"
+      >
+      <!--满减券类型 -->
+      <view wx:if="{{item.coupontype==01}}" 
+      class="item_left dis_item_left">
+      <text class="price">{{item.price}}</text>
+      <text style="color:#fff">元</text>
+      </view>
+       <!--抽奖券类型 -->
+       <view wx:if="{{item.coupontype==04}}"
+        class="item_left lucky_item_left">
+     <image class="integralStoreimg" 
+     src="../../../images/integralStore1.png"></image>
+      </view>
+       <!--打折券类型 -->
+       <view wx:if="{{item.coupontype==02}}" 
+       class="item_left sale_item_left ">
+      <text class="price">{{item.price}}</text>
+      <text style="color:#fff">元</text>
+      </view>
+        <!--抵时券类型 -->
+       <view wx:if="{{item.coupontype==03}}" 
+       class="item_left time_item_left ">
+      <text class="price">{{item.price}}</text>
+      <text style="color:#fff">元</text>
+      </view>
+      <image class="sawtoothimg"src="../../../images/sawtooth.png"></image>
+      <view class="mem">
+        <view class=" title">{{item.title}} </view>
+        <view class="detail range">使用范围：{{item.range}} </view>
+        <view class=" detail condition">使用条件：{{item.condition}} </view>
+        <view class="detail usetime">有效时间：{{item.usetime}}</view>
+      </view>
+   
+     
+      </view> 
+      
+      <text class="end_tips">没有更多优惠了哦</text> 
+        
+      </scroll-view>
+ </view>
+  <view class="foot">
+  <text class=" footext footext1">查看历史优惠券</text>
+  <text class="footext footext2" bindtap="toCoupon">去领券>></text>
+  </view>
+
+<!--满减券主体-->
+ <view class="view1" hidden="{{currentTab!=1}}"> 
+  <scroll-view scroll-y="true" style="height: 900rpx"
+    class="coupon_content" >
+     <view wx:for-items="{{discouponlist}}"  wx:key="discoupon"  class="coupon-list"
+      >
+    
+       <view  class="item_left dis_item_left ">
+      <text class="price">{{item.price}}</text>
+      <text style="color:#fff">元</text>
+      </view>
+       <image class="sawtoothimg"src="../../../images/sawtooth.png"></image>
+      <view class="mem">
+        <view class=" title">{{item.title}} </view>
+        <view class="detail range">使用范围：{{item.range}} </view>
+        <view class=" detail condition">使用条件：{{item.condition}} </view>
+        <view class="detail usetime">有效时间：{{item.usetime}}</view>
+      </view>
+   
+      
+      </view>
+ <text class="end_tips">没有更多优惠了哦</text>
+    </scroll-view>
+ </view>
+<!--打折券主体-->
+ <view class="view1" hidden="{{currentTab!=2}}"> 
+  <scroll-view scroll-y="true" style="height: 900rpx"
+    class="coupon_content" >
+      <view wx:for-items="{{salecouponlist}}"  wx:key="salecoupon"  class="coupon-list"
+      >
+    
+       <view  class="item_left sale_item_left ">
+      <text class="price">{{item.price}}</text>
+      <text style="color:#fff">元</text>
+      </view>
+       <image class="sawtoothimg"src="../../../images/sawtooth.png"></image>
+      <view class="mem">
+        <view class=" title">{{item.title}} </view>
+        <view class="detail range">使用范围：{{item.range}} </view>
+        <view class=" detail condition">使用条件：{{item.condition}} </view>
+        <view class="detail usetime">有效时间：{{item.usetime}}</view>
+      </view>
+    
+      
+      </view>
+ <text class="end_tips">没有更多优惠了哦</text>
+
+    </scroll-view>
+ </view>
+ <!--抵时券主体-->
+ <view class="view1" hidden="{{currentTab!=3}}"> 
+  <scroll-view scroll-y="true" style="height: 900rpx"
+    class="coupon_content" >
+  
+     <view wx:for-items="{{timecouponlist}}"  wx:key="timecoupon"  class="coupon-list"
+      >
+    
+       <view  class="item_left time_item_left ">
+      <text class="price">{{item.price}}</text>
+      <text style="color:#fff">元</text>
+      </view>
+       <image class="sawtoothimg"src="../../../images/sawtooth.png"></image>
+      <view class="mem">
+        <view class=" title">{{item.title}} </view>
+        <view class="detail range">使用范围：{{item.range}} </view>
+        <view class=" detail condition">使用条件：{{item.condition}} </view>
+        <view class="detail usetime">有效时间：{{item.usetime}}</view>
+      </view>
+  
+      
+      </view>
+ <text class="end_tips">没有更多优惠了哦</text>
+    </scroll-view>
+ </view>
+ <!--抽奖券主体-->
+ <view class="view1" hidden="{{currentTab!=4}}"> 
+  <scroll-view scroll-y="true" style="height: 900rpx"
+    class="coupon_content" >
+     <view wx:for-items="{{discouponlist}}"  wx:key="discoupon"  class="coupon-list"
+      >
+    
+       <view class="item_left lucky_item_left">
+     <image class="integralStoreimg" 
+     src="../../../images/integralStore1.png"></image>
+      </view>
+       <image class="sawtoothimg"src="../../../images/sawtooth.png"></image>
+      <view class="mem">
+        <view class=" title">{{item.title}} </view>
+        <view class="detail range">使用范围：{{item.range}} </view>
+        <view class=" detail condition">使用条件：{{item.condition}} </view>
+        <view class="detail usetime">有效时间：{{item.usetime}}</view>
+      </view>
+ 
+      
+      </view>
+ <text class="end_tips">没有更多优惠了哦</text>
+      
+    </scroll-view>
+ </view>
+
+</view>
+

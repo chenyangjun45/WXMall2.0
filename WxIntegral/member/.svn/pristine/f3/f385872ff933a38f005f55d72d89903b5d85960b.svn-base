@@ -1,0 +1,61 @@
+<!--pages/component/integral/integral.wxml-->
+<import src="../../templates/smallLoaderTemplate.wxml" />
+<view class="contain">
+   <view class="index">
+      <view class="regular" bindtap="turnRule">
+         <image class="image-hv" src="../../../images/integral.png" />
+         <view class="regular-text">积分规则</view>
+      </view>
+      <view class="title">我的积分</view>
+      <view class="num">{{num}}</view>
+      <view class="message">
+         <view class="integral left">快过期积分：{{quick}}分</view>
+         <view class="integral">未生效积分：{{unuse}}分</view>
+      </view>
+      <button bindtap="turnStore" class="btn bt">进入积分商城</button>
+   </view>
+
+   <view class="swiper-tab integral-message">
+      <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">收入</view>
+      <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">支出</view>
+   </view>
+
+   <view class="scroll-content" hidden="{{currentTab!=0}}">
+      <template is="smallLoaderTemplate" data="{{hideSmallLoader}}"></template>
+      <scroll-view scroll-y="true" style="height: 700rpx" class="content" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" bindtouchmove="scroll_touchmove" bindtouchend="scroll_touchend">
+         <view class="flex" wx:for="{{integralDetail}}" wx:for-item="item" wx:key="integralDetailItem">
+            <view class="list">
+               <view class="flex-item">
+                  <view class="flex-line">{{item.integralDate}}</view>
+                  <view class="flex-line">{{time}}</view>
+               </view>
+               <view class="flex-detail">
+                  <view class="flex-line">消费金额：{{item.payment}}元</view>
+                  <view class="flex-line">流水号：{{item.payNum}}</view>
+               </view>
+               <view class="flex-item">{{item.integralType}}</view>
+               <view class="flex-item">+{{item.integralNum}}</view>
+            </view>
+         </view>
+      </scroll-view>
+   </view>
+   <view class="scroll-content" hidden="{{currentTab!=1}}">
+      <scroll-view scroll-y="true" style="height: 700rpx" class="content">
+         <view class="flex" wx:for="{{integralDetail}}" wx:for-item="item" wx:key="integralDetailItem">
+            <view class="list">
+               <view class="flex-item">
+                  <view class="flex-line">{{item.integralDate}}</view>
+                  <view class="flex-line">{{time}}</view>
+               </view>
+               <view class="flex-detail">
+                  <view class="flex-line">消费金额：{{item.payment}}元</view>
+                  <view class="flex-line">流水号：{{item.payNum}}</view>
+               </view>
+               <view class="flex-item">{{item.integralType}}</view>
+               <view class="flex-item">-{{item.integralNum}}</view>
+            </view>
+         </view>
+      </scroll-view>
+   </view>
+
+</view>

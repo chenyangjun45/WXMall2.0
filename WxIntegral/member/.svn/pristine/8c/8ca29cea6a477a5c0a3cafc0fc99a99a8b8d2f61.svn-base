@@ -1,0 +1,138 @@
+<!--pages/component/integralStore/integralStore.wxml-->
+<view class="all">
+  <view class="interval"></view>
+  <view>
+    <image class="headImg" src="../resources/images/integralStore.png"></image>
+  </view>
+  <view class="interval"></view>
+  <view class="integralStore">
+    <view class="mem mem1">
+      <view class="content">
+        <image class="pic1" src="../resources/images/integralStore5.png"></image>
+        <text class="b-integralStore5">{{allPoints}}</text>
+      </view>
+      <view class="content">
+        <image class="pic2" src="../resources/images/integralStore2.png"></image>
+        <text class="b-integralStore2">兑换记录</text>
+      </view>
+    </view>
+    <view class="interval"></view>
+    <view class="mem mem2">
+      <view class="content">
+        <image class="pic3" src="../resources/images/integralStore3.png"></image>
+        <view class="des_1">
+          <text class="des_1_1">{{ticket1_name}}</text>
+          <text class="des_1_2">{{ticket1_des}}</text>
+        </view>
+      </view>
+      <view class="content">
+        <image class="pic4" src="../resources/images/integralStore4.png"></image>
+        <view class="des_1">
+          <text class="des_1_1">{{ticket2_name}}</text>
+          <text class="des_1_2">{{ticket2_des}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="interval"></view>
+        <!-- <view wx:if="{{tickets[0].pic==null}}">
+    </view>  -->
+  <!-- 测试数组 -->
+  <view class="integralStoreList">
+    <text class="list_des">积分好礼</text>
+    <view>
+      <view wx:for="{{tickets}}" wx:for-index="idx" wx:for-item="itemName">
+        <view class="list_item">
+          <!-- 如果是现金优惠券 -->
+          <view  wx:if="{{tickets[idx].ticket_type==1}}" class="item_left">
+              <view class="first">
+                <text>{{tickets[idx].ticket_price}}</text>
+              </view>
+              <view class="second">
+                <text>元</text>
+              </view>
+          </view>
+          <!-- 如果是电影券 -->
+          <view  wx:if="{{tickets[idx].ticket_type==2}}" class="item_left">
+              <image class="movie_pic" src="{{tickets[idx].pic}}"></image>
+          </view>
+          <!-- 绿色优惠券 -->
+          <view  wx:if="{{tickets[idx].ticket_type==3}}" class="item_left_green">
+              <view class="first">
+                <text>{{tickets[idx].ticket_price}}</text>
+              </view>
+              <view class="second">
+                <text>元</text>
+              </view>
+          </view>
+          <view class="item_right">
+              <view class="bg"></view>
+              <view class="ticket_info">
+                <view class="ticket_info1">
+                  <text>{{tickets[idx].ticket_name_info}}</text>
+                </view>
+                <view class="ticket_info2">
+                  <text>{{tickets[idx].ticket_scope}}</text>
+                </view>
+                <view class="ticket_info2">
+                  <text>{{tickets[idx].ticket_condition}}</text>
+                </view>
+                <view class="ticket_info2">
+                  <text>{{tickets[idx].ticket_term_of_validity}}</text>
+                </view>
+              </view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="list_item">
+        <view class="item_left">
+          <image class="movie_pic" src="../resources/images/integralStore1.png"></image>
+        </view>
+        <view class="item_right">
+          <view class="bg"></view>
+          <view class="ticket_info">
+            <view class="ticket_info1">
+              <text>价值30元优惠券</text>
+            </view>
+            <view class="ticket_info2">
+              <text>使用范围：无限制</text>
+            </view>
+            <view class="ticket_info2">
+              <text>使用条件：满3000积分且消费满300元</text>
+            </view>
+            <view class="ticket_info2">
+              <text>有效时间：2017-07-01～2018-07-01</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="list_item">
+        <view class="item_left_green">
+          <view class="first">
+            <text>30</text>
+          </view>
+          <view class="second">
+            <text>元</text>
+          </view>
+        </view>
+        <view class="item_right">
+          <view class="bg"></view>
+          <view class="ticket_info">
+            <view class="ticket_info1">
+              <text>价值30元优惠券</text>
+            </view>
+            <view class="ticket_info2">
+              <text>使用范围：无限制</text>
+            </view>
+            <view class="ticket_info2">
+              <text>使用条件：满3000积分且消费满300元</text>
+            </view>
+            <view class="ticket_info2">
+              <text>有效时间：2017-07-01～2018-07-01</text>
+            </view>
+          </view>
+        </view>
+      </view> -->
+    </view>
+  </view>
+</view>

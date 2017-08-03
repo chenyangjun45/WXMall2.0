@@ -1,0 +1,171 @@
+/* pages/component/integralStore/integralStore.wxss */
+.all{
+  font: 32rpx Apple LiGothic Medium ,Microsoft YaHei, SimSun, Arial, Helvetica, sans-serif; 
+  background-color: #fff;
+  color: #626262;
+}
+.interval{
+    width: 100%;
+    height: 20rpx;
+    background-color: #EEEEEE;
+}
+.headImg {
+    width: 750rpx;
+    height: 340rpx;
+    display: block;
+}
+.mem{
+  display: flex;
+}
+.mem1{
+  padding: 16px 0;
+}
+.content{
+  text-align: center;
+  display: flex;
+  border-right: 1px solid #eee;
+}
+.pic1{
+  padding-top:12rpx;
+  margin-left:50rpx;
+  height: 76rpx;
+  width:86rpx;
+}
+.b-integralStore5{
+  height: 100rpx;
+  width:234rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+}
+.pic2{
+  padding-top:12rpx;
+  margin-left:50rpx;
+  height: 76rpx;
+  width:86rpx;
+}
+.b-integralStore2{
+  height: 100rpx;
+  line-height: 100rpx;
+  width:234rpx;
+  font-size: 40rpx;
+}
+.pic3{
+  /* padding-top:12rpx; */
+  /* margin-left:10rpx; */
+  padding:20rpx 20rpx;
+  height: 100rpx;
+  width:100rpx; 
+}
+.des_1{
+  text-align: left;
+  display: flex;
+  flex-direction:column;
+  height: 140rpx;
+  width:235rpx;
+  font-size: 40rpx;
+}
+.des_1_1{
+  height: 50rpx;
+  padding-top:20rpx;
+  line-height: 50rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.des_1_2{
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+.pic4{
+  /* padding-top:12rpx; */
+  /* margin-left:10rpx; */
+  padding:20rpx 20rpx;
+  height: 100rpx;
+  width:100rpx;
+}
+/* 券列表 */
+.integralStoreList{
+  text-align:left;
+  border-bottom: 1px solid #eee;
+}
+.list_des{
+  height: 140rpx;
+  line-height: 140rpx;
+  padding-left: 48rpx;
+  font-size: 60rpx;
+}
+.list_item{
+  padding-top: 40rpx;
+  height: 360rpx;
+  display:flex;
+}
+.item_left{
+  background-color: #F0616E;
+  display:flex;
+  height: 360rpx;
+  width:375rpx;
+}
+.first{
+  /* position: absolute;  */
+  width: 250rpx;
+  height: 360rpx;
+  line-height: 360rpx;
+  font-size: 240rpx;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  /* top: 20px;
+  left: 0; */
+  z-index: 1;
+}
+.second{
+  position: relative;
+  height:280rpx;
+  /* 注意指定了line-height以后文字就在最中间 */
+  line-height: 310rpx; 
+  width:125rpx;
+  text-align: left;
+  font-size: 30px;
+  color: #fff;
+  padding-top:80rpx;
+  padding-left:40rpx;
+}
+.item_right{
+  height: 360rpx;
+  background-color: #eeeeee;
+  /* width:376rpx; */
+  display:flex;
+}
+.bg{
+  position:relative;
+  left:-24rpx;
+  width: 24rpx;
+  height: 360rpx;
+  background: transparent url(../resources/images/sawtooth.png) repeat-y left;
+}
+.ticket_info{
+  /* padding-left: 20rpx;  */
+  width:361rpx;
+}
+.ticket_info1{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 44rpx;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.ticket_info2{
+  /* 取消height，解决文字重叠问题 */
+  /* height: 40rpx; */
+  line-height: 50rpx;
+  font-size: 36rpx;
+}
+.movie_pic{
+  height:360rpx;
+  width:375rpx;
+}
+.item_left_green{
+  background-color: green;
+  display:flex;
+  width:375rpx;
+}

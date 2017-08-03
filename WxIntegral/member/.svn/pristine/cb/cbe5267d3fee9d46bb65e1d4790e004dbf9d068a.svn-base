@@ -1,0 +1,130 @@
+/* pages/store/coupon/coupon.wxss */
+
+.inteval {
+   width: 100%;
+   height: 20rpx;
+   background-color: #eee;
+}
+
+/*
+导航栏样式
+*/
+
+.swiper-tab {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: 80rpx;
+   border-bottom: 5rpx solid #eee;
+}
+
+.tab-item {
+   margin: 5rpx 15rpx 0 5rpx;
+   font-size: 38rpx;
+   height: 80rpx;
+   line-height: 80rpx;
+}
+
+.on {
+   color: #50afff;
+   border-bottom: 3rpx solid #50afff;
+}
+
+/**
+优惠券列表样式
+*/
+
+.swiper {
+   height: 800rpx;
+}
+
+.coupon-list {
+   display: flex;
+   flex-direction: row;
+   height: 200rpx;
+   width: 100%;
+   background: #f3f3f3;
+   margin-top: 20rpx;
+}
+
+.pricepanel {
+   background-color: #f0616e;
+   height: 200rpx;
+   width: 250rpx;
+}
+
+.price {
+   line-height: 200rpx;
+   font-size: 120rpx;
+   font-weight: 900;
+   margin-left: 30rpx;
+   color: #fff;
+}
+
+.sawtoothimg {
+   width: 10rpx;
+   height: 200rpx;
+   z-index: 20;
+   position: relative;
+   left: -5rpx;
+}
+
+.mem {
+   width: 440rpx;
+}
+
+.title {
+   font-size: 30rpx;
+   margin: 20rpx 0 20rpx 20rpx;
+}
+
+.detail {
+   font-size: 25rpx;
+   margin-left: 20rpx;
+   color: #626262;
+}
+
+.septalLineimg {
+   width: 5rpx;
+   height: 200rpx;
+}
+
+.get {
+   padding-top: 30rpx;
+   padding-left: 10rpx;
+   width: 30rpx;
+   font-size: 32rpx;
+   color: #50afff;
+}
+
+/*
+底部样式
+*/
+
+.foot {
+   width: 100%;
+   height: 80rpx;
+   position: absolute;
+   bottom: 0;
+   font-size: 28rpx;
+   display: flex;
+   flex-direction: row;
+}
+
+.footext {
+   height: 30rpx;
+   line-height: 30rpx;
+   margin: 25rpx 0;
+   width: 50%;
+}
+
+.footext1 {
+   text-align: right;
+   padding-right: 20rpx;
+   border-right: 1rpx solid #626262;
+   color: #c3c3c3;
+}
+
+.footext2 {
+   padding-left: 20rpx;
+}

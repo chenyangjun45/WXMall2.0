@@ -1,0 +1,160 @@
+/* pages/user/setBirthday/setBirthday.wxss */
+.birthContent {
+  height: 100%;
+  width: 100%;
+}
+
+.divice {
+  height: 20rpx;
+  width: 100%;
+  background-color: #eee;
+}
+
+.flex-wrp {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #eee;
+}
+
+.textRight {
+  font-size: 40rpx;
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap; /* 不换行 */
+  padding-right: 10rpx;
+  word-break: "市";
+}
+
+.textLeft {
+  align-content: center;
+  align-self: left;
+  font-size: 40rpx;
+  display: inline-block;
+}
+
+.Contents {
+  padding-left: 23rpx;
+  padding-right: 23rpx;
+  padding-top: 23rpx;
+}
+
+.textTips {
+  font-size: 27rpx;
+  display: inline-block;
+}
+
+.sureBtn {
+  width: 100%;
+  background-color: #50afff;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 50rpx;
+  text-align: center;
+}
+
+.divice1 {
+  height: 100rpx;
+  width: 100%;
+}
+
+.rightRaw {
+  height: 50rpx;
+  width: 30rpx;
+  align-self: center;
+  padding-left: 20rpx;
+}
+
+.rightContent {
+  color: #c3c3c3;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.datePicker {
+  height: 600rpx;
+   position: absolute;
+   top: 20%;
+   width: 560rpx;
+   z-index: 110;
+   background-color: #fff;
+  display: flex;
+  Flex-direction:column;
+  align-items: center;
+}
+
+.dateView {
+  width: 100%;
+  padding-top: 20rpx;
+  display: flex;
+  Flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.textDate {
+  width: 33%;
+  text-align: center;
+  font-size: 40rpx;
+  color: #50afff;
+}
+
+.date0 {
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  border-bottom: 3rpx solid #50afff;
+  color: #50afff;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.column {
+  width: 180rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+.btnView {
+  z-index: 10;
+  margin-top: 30rpx;
+  border-top: 1rpx solid #c3c3c3;
+  bottom: 0rpx;
+  width: 100%;
+  height: 94rpx;
+  display: flex;
+  Flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.btnPicker {
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+}
+.hLine{
+  width: 2rpx;
+  height: 94rpx;
+  border-left: 2rpx solid #c3c3c3;
+}
+.columnView{
+line-height: 68rpx ;
+text-align: center;
+font-size: 36rpx;
+align-content: center;
+}
+.shade {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background-color: #000;
+   opacity: 0.3;
+}
+.hideView{
+  display: flex;
+  Flex-direction:column;
+  align-items: center;
+}

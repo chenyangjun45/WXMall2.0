@@ -1,0 +1,93 @@
+<!--integralStore.wxml-->
+<import src="../../templates/loaderTemplate.wxml"/>
+<view class="all">
+  <view class="interval"></view>
+  <view>
+    <image class="headImg" src="../../../images/integralStore.png"></image>
+  </view>
+  <view class="interval"></view>
+  <view class="integralStore">
+    <view class="mem mem1">
+      <view class="content">
+        <image class="pic1" src="../../../images/integralStore5.png"></image>
+        <text class="b-integralStore5">{{allPoints}}</text>
+      </view>
+      <view class="content">
+        <image class="pic2" src="../../../images/integralStore2.png"></image>
+        <text class="b-integralStore2">兑换记录</text>
+      </view>
+    </view>
+    <view class="interval"></view>
+    <view class="mem mem2">
+      <view class="content">
+        <image class="pic3" src="../../../images/integralStore3.png"></image>
+        <view class="des_1">
+          <text class="des_1_1">{{ticket1_name}}</text>
+          <text class="des_1_2">{{ticket1_des}}</text>
+        </view>
+      </view>
+      <view class="content">
+        <image class="pic4" src="../../../images/integralStore4.png"></image>
+        <view class="des_1">
+          <text class="des_1_1">{{ticket2_name}}</text>
+          <text class="des_1_2">{{ticket2_des}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="interval"></view>
+        <!-- <view wx:if="{{tickets[0].pic==null}}">
+    </view>  -->
+  <!-- 测试数组 -->
+  <view class="integralStoreList">
+    <text class="list_des">积分好礼</text>
+    <scroll-view scroll-y="true" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll">
+    </scroll-view>
+    <view>
+      <view wx:for="{{tickets}}" wx:for-index="idx" wx:for-item="itemName">
+        <view class="list_item">
+          <!-- 如果是现金优惠券 -->
+          <view  wx:if="{{tickets[idx].ticket_type==1}}" class="item_left">
+              <view class="first">
+                <text>{{tickets[idx].ticket_price}}</text>
+              </view>
+              <view class="second">
+                <text>元</text>
+              </view>
+          </view>
+          <!-- 如果是电影券 -->
+          <view  wx:if="{{tickets[idx].ticket_type==2}}" class="item_left">
+              <image class="movie_pic" src="{{tickets[idx].pic}}"></image>
+          </view>
+          <!-- 绿色优惠券 -->
+          <view  wx:if="{{tickets[idx].ticket_type==3}}" class="item_left_green">
+              <view class="first">
+                <text>{{tickets[idx].ticket_price}}</text>
+              </view>
+              <view class="second">
+                <text>元</text>
+              </view>
+          </view>
+          <view class="item_right">
+              <image class="bg" src="../../../images/sawtooth.png"></image>
+              <view class="ticket_info">
+                <view class="ticket_info1">
+                  <text>{{tickets[idx].ticket_name_info}}</text>
+                </view>
+                <view class="ticket_info2">
+                  <text>{{tickets[idx].ticket_scope}}</text>
+                </view>
+                <view class="ticket_info2">
+                  <text>{{tickets[idx].ticket_condition}}</text>
+                </view>
+                <view class="ticket_info2">
+                  <text>{{tickets[idx].ticket_term_of_validity}}</text>
+                </view>
+              </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <template is="loaderTemplate"  data="{{hideLoader}}"></template>
+</view>

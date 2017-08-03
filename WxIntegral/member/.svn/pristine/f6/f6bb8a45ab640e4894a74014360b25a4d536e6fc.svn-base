@@ -1,0 +1,16 @@
+<template name="loaderTemplate">
+  <view class="load" bindtap="disappear" hidden="{{hideLoader}}">
+    <view class="load_bg"></view>
+    <view class="loading">
+      <view class="loader">
+        <view  class="all_span loader_span1"></view>
+        <view  class="all_span loader_span2"></view>
+        <view  class="all_span loader_span3"></view>
+        <view  class="all_span loader_span4"></view>
+      </view>
+      <view class="load_label">
+        加载中...
+      </view>
+    </view>
+  </view>
+</template>

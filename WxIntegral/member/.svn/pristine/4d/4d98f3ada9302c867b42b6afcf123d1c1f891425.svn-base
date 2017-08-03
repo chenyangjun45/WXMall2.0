@@ -1,0 +1,63 @@
+<!--pages/store/birthday/birthday.wxml-->
+<import src="../../templates/loaderTemplate.wxml"/>
+<view class="all">
+  <view class="interval"></view>
+  <view>
+    <view>
+      <image class="headImg" src="../../../images/birthday.png"></image>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="flex-item">
+      <image class="b-member1" src="../../../images/member1.png"></image>
+    </view>
+    <view class="flex-item">
+      <text class="info1" >生日信息</text>
+    </view>
+    <view class="flex-item">
+      <view class="angleRight">
+          <text class="info2">填写生日信息可享受生日特权</text>
+      </view>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="introduce">
+    <view class="title">
+      <text>特权详情</text>
+    </view>
+    <view class="para">
+      <text>{{privileges_details1}}</text>
+    </view>
+    <view class="para">
+      <text>{{privileges_details2}}</text>
+    </view>
+    <view class="para">
+      <text>{{privileges_details3}}</text>
+    </view>
+    <view class="para">
+      <text>{{privileges_details4}}</text>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="introduce">
+    <view class="title">
+      <text>如何获取特权</text>
+    </view>
+    <view class="para">
+      <text>{{privileges_method1}}</text>
+    </view>
+    <view class="para">
+      <text>{{privileges_method2}}</text>
+    </view>
+  </view>
+  <view class="interval"></view>
+  <view class="tips">
+      <text>想知道更多只能去问店家啦 ～</text>
+  </view>
+  <!-- 注意弹出弹框以后，别的区域都不能点 -->
+  <!-- <loading  class="loading" hidden="{{loadingHidden}}"  bindtap="disappear">
+    加载中
+  </loading>  -->
+  <template is="loaderTemplate"  data="{{hideLoader}}"></template> 
+</view>

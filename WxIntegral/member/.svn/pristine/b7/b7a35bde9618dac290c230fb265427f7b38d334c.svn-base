@@ -1,0 +1,111 @@
+// fullReduction.js
+//变量要定义在外面才能调用
+var countAll=1;
+var points=3000;
+var hidden=true;
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    full_reduction_name:'满300立减30',
+    term_of_validity:'<ul><li>使用时间：2017-07-01 ～ 2018-07-01（周末、节假日通用）</li></ul>',
+    condition:'<ul><li>积分达到3000</li></ul>',
+    illustrate:'<ul><li>发生退货时，最多可退买家实际付款金额，满减券不可退</li><li>说明具体内容</li></ul>',
+    count:countAll,
+    allPoints: points,
+    hidden:hidden
+  },
+  addOne: function (event) {
+    countAll++;
+    this.setData({
+      count:countAll
+    });
+  },
+  reduceOne: function(event){
+    countAll--;
+    if(countAll<=0){
+      countAll=1;
+      wx.showModal({
+        title: "兑换提示",
+        content: "已到最小数量！",
+        showCancel: false,
+        confirmText: "确定"
+      })
+    }
+    this.setData({
+      count: countAll
+    });
+  },
+  exchange:function(event){
+    this.setData({
+      hidden: false
+    });
+  },
+  cancel: function(event){
+    this.setData({
+      hidden: true
+    });
+  },
+  confirm:function(event){
+    this.setData({
+      hidden: true
+    });
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

@@ -1,0 +1,93 @@
+/* pages/store/birthday/birthday.wxss */
+
+.all {
+   font: 32rpx Apple LiGothic Medium,
+          Microsoft YaHei,
+          SimSun,
+          Arial,
+          Helvetica,
+          sans-serif;
+   background-color: #fff;
+   color: #626262;
+}
+
+.interval {
+   width: 100%;
+   height: 20rpx;
+   background-color: #eee;
+}
+
+.headImg {
+   width: 750rpx;
+   height: 300rpx;
+   display: block;
+}
+
+.middle {
+   height: 120rpx;
+   width: 100%;
+   line-height: 120rpx;
+   font-size: 36rpx;
+   border-bottom: 2rpx solid #eee;
+   padding: 24rpx 24rpx;
+}
+
+.flex-wrp {
+   display: flex;
+   border-bottom: 2rpx solid #eee;
+}
+
+.flex-item {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.b-member1 {
+   height: 52rpx;
+   width: 64rpx;
+   margin-left: 20rpx;
+   margin-right:20rpx;
+}
+
+.info1 {
+   width: 150rpx;
+   font-size: 36rpx;
+}
+
+.angleRight {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: left;
+   height: 100rpx;
+   width: 450rpx;
+   background: url(../../../images/angleRight.png) no-repeat right center;
+   /* padding-right: 40rpx;    */
+   color: #c3c3c3;
+   font-size: 28rpx;
+}
+
+.title {
+   height: 120rpx;
+   line-height: 120rpx;
+   padding: 0 48rpx;
+   font-size: 48rpx;
+   border-bottom: 2rpx solid #eee;
+   font-weight: 600;
+}
+
+.para {
+   padding: 0 48rpx;
+   font-size: 36rpx;
+   line-height: 50rpx;
+   margin: 20rpx 0;
+}
+
+.tips {
+   font-size: 40rpx;
+   padding: 0 24px;
+   margin: 20px 0;
+   text-align: center;
+}

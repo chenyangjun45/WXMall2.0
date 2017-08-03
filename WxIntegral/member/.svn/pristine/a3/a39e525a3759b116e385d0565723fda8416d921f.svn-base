@@ -1,0 +1,52 @@
+/* pages/user/nicknameChange/nicknameChange.wxss */
+@import "../../common/lib/weui.wxss";
+
+.contain {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   box-sizing: border-box;
+}
+
+.interval {
+   height: 20rpx;
+   width: 100%;
+   background-color: #eee;
+   border: 1rpx solid #eee;
+}
+
+.img {
+   width: 30rpx;
+   height: 30rpx;
+   margin: 25rpx 0 25rpx 220rpx;
+}
+
+.btn {
+   width: 90%;
+   height: 80rpx;
+   /* background-color: #50afff; */
+   background-color: #c3c3c3;
+   border: none;
+   outline: none;
+   margin: 140rpx auto;
+   display: block;
+   border-radius: 8rpx;
+   font-size: 36rpx;
+   color: #fff;
+}
+
+.btnShow {
+   width: 90%;
+   height: 80rpx;
+   background-color: #50afff;
+   /* background-color: #c3c3c3; */
+   border: none;
+   outline: none;
+   margin: 140rpx auto;
+   display: block;
+   border-radius: 8rpx;
+   font-size: 36rpx;
+   color: #fff;
+}

@@ -1,0 +1,182 @@
+// pages/user/setBirthday/setBirthday.js
+const date = new Date()
+const years = []
+const months = []
+const days = []
+
+for (let i = 1990; i <= date.getFullYear(); i++) {
+   years.push(i)
+}
+
+for (let i = 1; i <= 12; i++) {
+   months.push(i)
+}
+
+for (let i = 1; i <= 31; i++) {
+   days.push(i)
+}
+function StringBuffer() {
+   this.buffer = [];
+}
+StringBuffer.prototype = {
+   constructor: StringBuffer,
+   append: function (str) {
+      this.buffer.push(str);
+      return this;
+   },
+   toString: function () {
+      return this.buffer.join("");
+   }
+}
+Page({
+
+   /**
+    * 页面的初始数据
+    */
+   data: {
+      pickerHidden: true,
+      hidden: true,
+      nocancel: false,
+      birthday: '1988-04-10',
+      tips: '重要提醒：生日只能输入一次，不可修改。根据所填生日，能够享受关于生日的优惠或特权，请认真输入。',
+      confirmText: '生日只能输入一次，不可修改。根据所填生日，能够享受关于生日的优惠或特权',
+      confirmText1: '确定是:',
+      confirmText2: ' ?',
+
+      years: years,
+      year: date.getFullYear(),
+      months: months,
+      month: date.getMonth() + 1,
+      days: days,
+      day: date.getDate(),
+      year: date.getFullYear(),
+      value: [date.getFullYear(), date.getMonth(), date.getDate() - 1],
+   },
+   choseDate: function () {
+      this.setData({
+         pickerHidden: false
+      });
+   },
+   bindChange: function (e) {
+      const val = e.detail.value
+      this.setData({
+         year: this.data.years[val[0]],
+         month: this.data.months[val[1]],
+         day: this.data.days[val[2]]
+      })
+   },
+   //  点击日期组件确定事件  
+   bindDateChange: function (e) {
+      this.setData({
+         birthday: e.detail.value
+      })
+   },
+   btn_sure: function (event) {
+      this.setData({
+         hidden: false
+      });
+   },
+   cancel: function () {
+      this.setData({
+         hidden: true
+      });
+   },
+   cancel0: function () {
+      this.setData({
+         pickerHidden: true
+      });
+   },
+   confirm: function () {
+      this.setData({
+         hidden: true
+      });
+      console.log("clicked confirm");
+      var pages = getCurrentPages();
+      var prevPage = pages[pages.length - 2]; //上一个页面
+      //直接调用上一个页面的setData()方法，把数据存到上一个页面中去
+      prevPage.setData({
+         birthday: this.data.birthday
+      })
+      wx.navigateBack()
+   },
+   confirm0: function () {
+      var buffer = new StringBuffer();
+      var y = this.data.year.toString();
+      var m = this.data.month.toString();
+      var d = this.data.day.toString();
+      buffer.append(y).append("-")
+         .append(m).append("-").append(d);
+      var result = buffer.toString();
+      this.setData({
+         birthday: result,
+         pickerHidden: true,
+      });
+      console.log("clicked confirm");
+   },
+   btn_today: function (e) {
+      this.setData({
+         year: date.getFullYear(),
+         month: date.getMonth() + 1,
+         day: date.getDate(),
+         value: [date.getFullYear(), date.getMonth(), date.getDate() - 1],
+      });
+   },
+   /**
+    * 生命周期函数--监听页面加载
+    */
+   onLoad: function (options) {
+      this.setData({
+         birthday: options.V_birthday
+      });
+      console.log(options.V_birthday)
+   },
+
+   /**
+    * 生命周期函数--监听页面初次渲染完成
+    */
+   onReady: function () {
+
+   },
+
+   /**
+    * 生命周期函数--监听页面显示
+    */
+   onShow: function () {
+
+   },
+
+   /**
+    * 生命周期函数--监听页面隐藏
+    */
+   onHide: function () {
+
+   },
+
+   /**
+    * 生命周期函数--监听页面卸载
+    */
+   onUnload: function () {
+
+   },
+
+   /**
+    * 页面相关事件处理函数--监听用户下拉动作
+    */
+   onPullDownRefresh: function () {
+
+   },
+
+   /**
+    * 页面上拉触底事件的处理函数
+    */
+   onReachBottom: function () {
+
+   },
+
+   /**
+    * 用户点击右上角分享
+    */
+   onShareAppMessage: function () {
+
+   }
+})

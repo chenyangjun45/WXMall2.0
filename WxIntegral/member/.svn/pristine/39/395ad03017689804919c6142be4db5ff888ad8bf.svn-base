@@ -1,0 +1,98 @@
+/* pages/store/fullReduction/fullReduction.wxss */
+.all{
+  font: 32rpx Apple LiGothic Medium ,Microsoft YaHei, SimSun, Arial, Helvetica, sans-serif; 
+  background-color: #fff;
+  color: #626262;
+}
+.interval{
+    width: 100%;
+    height: 20rpx;
+    background-color: #EEEEEE;
+}
+.headImg {
+    width: 750rpx;
+    height: 340rpx;
+    display: block;
+}
+.flex-wrp{
+    display:flex;
+    height:100rpx;
+}
+.flex-item{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.info1{
+  font-size: 56rpx;
+  font-weight: 600;
+  padding-left:48rpx;
+  padding-right:20rpx;
+}
+.info2{
+  font-size: 56rpx;
+}
+.title{
+  height: 120rpx;
+  line-height: 120rpx;
+  padding: 0 48rpx;
+  font-size: 48rpx;
+  border-bottom: 2rpx solid #eee;
+  font-weight: 600;
+}
+.para{
+  padding: 0 20rpx;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  margin: 20rpx 0;
+}
+.fullReduction {
+    padding: 48rpx 0;
+}
+.count{
+    display: inline-block;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0 26rpx; 
+    font-size: 48rpx;
+    text-align: center;
+}
+.reduce{
+  border: 2rpx solid #FF9100;
+  padding: 0;
+  width: 100rpx;
+}
+.number{
+  border-top: 2rpx solid #FF9100;
+  border-bottom: 2rpx solid #FF9100;
+  width: 50rpx;
+}
+.add{
+  border: 2rpx solid #FF9100;
+  background-color: #FF9100;
+  color: #fff;
+  padding: 0;
+  width: 100rpx;
+}
+.integral{
+  float: right;
+  color: #FF0000;
+  font-size: 48rpx;
+}
+.integral_des{
+  font-size: 30rpx;
+}
+.button {
+  height: 100rpx;
+  margin: 40rpx 24rpx;
+  padding-top:8rpx;
+  background-color: #50AFFF;
+  border-radius: 6rpx;
+  color: #fff;
+  font-size: 48rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: none;
+  outline: none;
+}

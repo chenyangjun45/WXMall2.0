@@ -1,0 +1,103 @@
+<!--pages/store/memberPrivilege/memberPrivilege.wxml-->
+<import src="../../templates/loaderTemplate.wxml" />
+<view class="all">
+  <view class="divice" />
+  <view class="memberCard">
+    <view class="userView">
+      <image class="userImg" src="../../../images/user1.png" />
+    </view>
+    <view class="cardView">
+      <image class="memberImg" src="../../../images/memberCard.png"></image>
+      <view class="cardText">
+        <text class="memberText">{{memberGrade}}</text>
+        <view>
+          <text class="memberText">会员卡号:</text>
+          <text class="memberText">{{memberNumber}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="userScore" bindtap="getRull" style="flex-direction:row;">
+      <view class="scoreLeft">
+        <image class="lefticon" src="../../../images/member1.png"></image>
+        <text class="scoreText">积分规则</text>
+      </view>
+      <view class="rightContent" style="flex-direction:row;">
+        <image class="rightRaw" mode="aspectFit" src="../../../images/angleRight.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="line"></view>
+  <view class="memberGrade">
+    <view class="memberV1">
+      <view class="gradeView">
+        <view class="grade">
+          <text class="textV">V1</text>
+        </view>
+        <view class="full bg1">
+        </view>
+      </view>
+      <text class="txt_p">普通会员</text>
+    </view>
+    <view class="memberV1">
+      <view class="gradeView">
+        <view class="grade2">
+          <text class="textV">V2</text>
+        </view>
+        <view class="bg">
+        </view>
+      </view>
+      <text class="txt_p2">白银会员</text>
+    </view>
+    <view class="memberV1">
+      <view class="gradeView">
+        <view class="grade3">
+          <text class="textV">V3</text>
+        </view>
+        <view class="bg">
+        </view>
+      </view>
+      <text class="txt_p3">黄金会员</text>
+    </view>
+    <view class="memberV1">
+      <view class="gradeView">
+        <view class="grade4">
+          <text class="textV">V4</text>
+        </view>
+        <view class="bg">
+        </view>
+      </view>
+      <text class="txt_p4">白金会员</text>
+    </view>
+    <view class="memberV1">
+      <view class="gradeView">
+        <view class="grade5">
+          <text class="textV">V5</text>
+        </view>
+        <view class="bg bg5">
+        </view>
+      </view>
+      <text class="txt_p5">钻石会员</text>
+    </view>
+  </view>
+  <view class="divice" />
+  <view class="memberCard">
+    <view class="mypri" style="flex-direction:row;">
+      <view class="scoreLeft">
+        <image class="lefticon" src="../../../images/member4.png" />
+        <text class="scoreText">我的特权</text>
+      </view>
+      <view class="rightContent" style="flex-direction:row;">
+        <text>会员等级和权益</text>
+        <image class="rightRaw" mode="aspectFit" src="../../../images/angleRight.png" />
+      </view>
+    </view>
+  </view>
+
+  <view class="divice" />
+  <view class="tipsView">{{tipsText}}</view>
+</view>
+<!-- 注意弹出弹框以后，别的区域都不能点 -->
+<!-- <loading  class="loading" hidden="{{loadingHidden}}"  bindtap="disappear">
+    加载中
+  </loading>  -->
+<template is="loaderTemplate" data="{{hideLoader}}"  bindtap="disappear"></template>

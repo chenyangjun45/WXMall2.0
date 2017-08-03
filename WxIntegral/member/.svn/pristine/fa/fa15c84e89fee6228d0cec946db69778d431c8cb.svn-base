@@ -1,0 +1,19 @@
+<!--pages/user/register/register.wxml-->
+<view class="container">
+   <view class="inteval"></view>
+   <view class="inputModule">
+      <text class="text">{{teltext}}</text>
+      <input class="telinput" placeholder="请输入手机号" />
+      <button class="button_m" bindtap="getVerification">获取验证码</button>
+   </view>
+   <view class="inteval2"></view>
+   <view class="inputModule">
+      <text class="text">{{valitext}}</text>
+      <input class="valinput" placeholder="请输入验证码" />
+
+   </view>
+   <view class="inteval"></view>
+   <view class="tips">{{tips}}</view>
+   <button class="button" bindtap="register">确定</button>
+
+</view>

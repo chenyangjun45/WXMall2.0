@@ -1,0 +1,71 @@
+<!--pages/component/personageMessage/personageMessage.wxml-->
+<view class="userContent">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="leftContent">
+      <text class="textLeft">头像</text>
+    </view>
+    <view class="rightContent" style="flex-direction:row;">
+      <image class="userImage" src="{{userImage}}" bindtap="chooseImage"/>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="divice"></view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="leftContent">
+      <text class="textLeft">昵称</text>
+    </view>
+    <view class="rightContent" style="flex-direction:row;">
+      <text class="textRight">{{nickname}}</text>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="leftContent">
+      <text class="textLeft">性别</text>
+    </view>
+    <view class="rightContent" style="flex-direction:row;">
+      <text class="textRight">{{male}}</text>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="divice"></view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="leftContent">
+      <text class="textLeft">生日</text>
+    </view>
+    <view class="rightContent" style="flex-direction:row;">
+      <text class="textRight" bindtap="setBirth">{{birthday}}</text>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="leftContent">
+      <text class="textLeft">车牌</text>
+    </view>
+    <view class="rightContent" style="flex-direction:row;">
+      <text class="textRight">{{numberPlate}}</text>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="divice"></view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="leftContent">
+      <text class="textLeft">收货地址</text>
+    </view>
+    <view class="rightContent" style="flex-direction:row;">
+      <text class="textRight">{{address}}</text>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="divice"></view>
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view class="leftContent">
+      <text class="textLeft">其他资料</text>
+    </view>
+    <view class="rightContent" style="flex-direction:row;">
+      <text class="textRight">{{otherInformation}}</text>
+      <image class="rightRaw" src="../../../images/angleRight.png"></image>
+    </view>
+  </view>
+  <view class="divice"></view>
+</view>

@@ -1,0 +1,40 @@
+// pages/member/member.js
+Page({
+
+   data: {
+      member: {
+         img: "images/user1.png",
+         name: "爱吃鱼罐头",
+         Grade: 4,
+         level: "白金会员",
+         QRCode: "kdcurry334455",
+         integral: "506000",
+         favorable: "5",
+         balance: "22.00"
+      }
+   },
+
+   /**
+    * 生命周期函数--监听页面加载
+    */
+   onLoad: function (options) {
+   },
+   /**
+    *页面实现跳转 
+    */
+   myinter: function () {
+      wx.navigateTo({
+         url: '../../pages/store/',
+      })
+   },
+   memClick:function(){
+     wx.navigateTo({
+       url:'../store/personageMessage/personageMessage',
+     })
+   },
+   myPriv:function(){
+     wx.navigateTo({
+       url: '../store/memberPrivilege/memberPrivilege',
+     })
+   }
+})
