@@ -1,0 +1,10 @@
+/**app.wxss**/
+@import "pages/templates/loaderTemplate.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family:Apple LiGothic Medium ,Microsoft YaHei, SimSun, Arial, Helvetica, sans-serif; 
+  justify-content: space-between;
+  box-sizing: border-box;
+}

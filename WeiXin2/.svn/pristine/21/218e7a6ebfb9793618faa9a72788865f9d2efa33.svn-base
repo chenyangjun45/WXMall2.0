@@ -1,0 +1,16 @@
+<template name="smallLoaderTemplate">
+  <view class="small_load" bindtap="" hidden="{{hideSmallLoader}}">
+    <view class="small_load_bg"></view>
+    <view class="small_loading">
+      <view class="small_loader">
+        <view  class="small_load_all_span small_loader_span1"></view>
+        <view  class="small_load_all_span small_loader_span2"></view>
+        <view  class="small_load_all_span small_loader_span3"></view>
+        <view  class="small_load_all_span small_loader_span4"></view>
+      </view>
+      <view class="small_load_label">
+        加载中
+      </view>
+    </view>
+  </view>
+</template>

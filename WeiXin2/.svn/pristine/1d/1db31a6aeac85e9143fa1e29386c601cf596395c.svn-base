@@ -1,0 +1,124 @@
+// pages/user/setGender/setGender.js
+// var url ='http://www.clr.org.cn/member/';
+var url = 'https://66567266.qcloud.la/';
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+     hidden:true,
+     hide:true,
+     male:'',
+  },
+
+  getGender:function(e){
+     var that=this;
+     var male = that.data.male;
+     var userId=that.data.userId;
+
+     var pages = getCurrentPages();
+     var prevPage = pages[pages.length - 2]; //上一个页面 
+     //直接调用上一个页面的setData()方法，把数据存到上一个页面中去
+     prevPage.setData({
+       male: male,
+     })
+     wx.navigateBack()
+     wx.request({
+        url: url + 'modifyGender?userSex=' + male + '&userId=' + userId,
+        method: 'POST',
+        data: {},
+        dataType: 'json',
+        header: { "content-type": "application/x-www-form-urlencoded" },
+        success: function (res) { }
+     })
+  },
+
+  choose:function(){
+     this.setData({
+        hidden:false,
+        hide:true,
+        male:'男',
+     });
+  },
+  chooseGender:function(){
+     this.setData({
+        hidden: true,
+        hide:false,
+        male:'女'
+     });
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      male: options.V_male,
+      userId: options.userId,
+    });
+    if (this.data.male == "男") {
+      this.setData({
+        hidden: false,
+        hide: true,
+        male: '男',   
+    });
+    } else if (this.data.male == "女") {
+      this.setData({
+        hidden: true,
+        hide: false,
+        male: '女', 
+      });
+    }
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+  
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

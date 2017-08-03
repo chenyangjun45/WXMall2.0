@@ -1,0 +1,101 @@
+/* pages/register/register.wxss */
+.inteval{
+ width:100%;
+ height:20rpx;
+ background-color: #EEEEEE;
+
+}
+.inputModule{
+  width:100%;
+  height:100rpx;
+  line-height: 100rpx;
+  display:flex; 
+  padding: 0 24rpx;
+}
+.text{
+   width:160rpx;
+   color:#626262;
+   height:100rpx;
+   line-height: 100rpx;
+   font-size:40rpx;
+  
+
+}
+.telinput{
+  
+  height: 60rpx;
+  margin-top: 23rpx;
+  
+}
+.closetelimg{
+   height: 40rpx;
+   width:40rpx;
+   margin-top:30rpx;
+   float: right; 
+}
+.closeverimg{
+   height: 40rpx;
+   width:40rpx;
+   position:absolute;
+   margin-top:32rpx;
+   right:35rpx;
+}
+.button_before{
+
+ color: #fff;
+ font-size: 26rpx;
+ background-color: #00A0E9;
+ width:200rpx;
+ height: 70rpx;
+ line-height: 70rpx;
+ margin:15rpx  0;
+ border-radius: 6rpx;
+  position:absolute;
+ right:24rpx; 
+}
+.button_after{
+ float:right;
+ color: #fff;
+ font-size: 26rpx;
+ background-color: #c3c3c3;
+ width:100rpx;
+ height: 70rpx;
+ line-height: 70rpx;
+ margin:15rpx  0;
+ border-radius: 6rpx;
+ position:absolute;
+ right:24rpx; 
+}
+.valinput{
+  width:300rpx;
+  height: 60rpx;
+  margin-top: 23rpx;
+ 
+}
+.inteval2{
+ width:100%;
+ height:2rpx;
+ background-color: #EEEEEE;
+
+}
+.tips{
+    
+    font-size: 32rpx;
+    padding: 0 24rpx;
+    margin: 20px 0;
+    color: #626262;
+}
+.buttondisabled{
+  
+  color: #fff;
+  font-size: 50rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #c3c3c3;
+  margin: 100rpx  24rpx;
+  
+}
+.button_r{
+ 
+  background-color: #00A0E9;
+}

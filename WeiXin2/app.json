@@ -1,0 +1,27 @@
+{
+   "pages": [
+      "pages/member/member",
+      "pages/store/myCoupon/myCoupon",
+      "pages/user/register/register",
+      "pages/store/birthday/birthday",
+      "pages/store/conversion/conversion",
+      "pages/store/coupon/coupon",
+      "pages/store/fullReduction/fullReduction",
+      "pages/store/integral/integral",
+      "pages/store/integral1/integral1",
+      "pages/store/integralStore/integralStore",
+      "pages/store/integralRule/integralRule",
+      "pages/store/memberPrivilege/memberPrivilege",
+      "pages/store/personageMessage/personageMessage",
+      "pages/user/nicknameChange/nicknameChange",
+      "pages/user/setBirthday/setBirthday",
+      "pages/user/setCardNo/setCardNo",
+      "pages/user/setGender/setGender",
+      "pages/store/favorable/favorable"
+   ],
+   "window": {
+      "navigationBarBackgroundColor": "#000000",
+      "navigationBarTextStyle": "white",
+      "backgroundTextStyle": "#fff"
+   }
+}

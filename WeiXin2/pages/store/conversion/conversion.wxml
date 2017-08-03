@@ -1,0 +1,15 @@
+<!--pages/store/conversion/conversion.wxml-->
+<view class="conversion">
+    <view class="conversion_item" wx:for="{{conversionRecord}}" wx:for-item="item" wx:key="integralDetailItem">
+      <image class="img" mode="widthFix" src="../../../images/conversion1.png" /> 
+      <view class="list">
+         <view class="flex-details">{{item.name}}</view>
+         <view class="flex-item">兑换地址：{{item.conversionAddress}}</view>
+         <view class="flex-item">有效时间：{{item.validTime}}</view>
+      </view>
+      <image class="right" mode="aspectFit" src="../../../images/angleRight.png" /> 
+   </view> 
+   <view class="none">
+      <text>没有更多兑换记录啦</text>
+   </view>
+</view>

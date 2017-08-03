@@ -1,0 +1,153 @@
+// pages/setCardNo/setCardNo.js
+// var url ='http://www.clr.org.cn/member/';
+var url = 'https://66567266.qcloud.la/';
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    userId: '',
+    currentID: 100,
+    cardNo: "车牌号:",
+    region: " ",
+    cardnumber: '',
+
+    tips: "重要提醒：为确保您会员等级达到免费停车或停车抵扣时使用，请输入真实车牌信息。",
+    citylist: [{ abbrname: "京", cityname: "北京" }, { abbrname: "津", cityname: "天津" }, { abbrname: "冀", cityname: "河北" }, { abbrname: "晋", cityname: "山西" }, { abbrname: "辽", cityname: "辽宁" }, { abbrname: "吉", cityname: "吉林" }, { abbrname: "苏", cityname: "江苏" }, { abbrname: "浙", cityname: "浙江" }, { abbrname: "皖", cityname: "安徽" }, { abbrname: "沪", cityname: "上海" }, { abbrname: "黑", cityname: "黑龙江" }, { abbrname: "鄂", cityname: "湖北" }],
+    numberPlate: '',
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      userId: options.userId,
+      numberPlate: options.V_numberPlate,
+    });
+    console.log(this.data.numberPlate);
+    //将字符串分割，将其传到对应的位置
+    var tempregion = this.data.numberPlate.substring(0, 1);
+    var tempnumber = this.data.numberPlate.slice(1);
+    console.log(tempnumber);
+    this.setData({
+      region: tempregion,
+      cardnumber: tempnumber
+    });
+
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
+  /**
+   * 用户点击省份绑定
+   */
+  bindCity: function (e) {
+    this.setData(
+      {
+        region: e.currentTarget.dataset.abbrname,
+        currentID: e.currentTarget.dataset.idx
+      }
+    )
+  },
+  /**
+   * 用户输入时的响应
+   */
+  bindValueInput: function (e) {
+    this.setData({
+      cardnumber: e.detail.value
+    })
+  },
+  /**
+   * 点击关闭按钮事件
+   */
+  close: function () {
+    this.setData({
+      inputValue: '',
+      cardnumber: ''
+    })
+  },
+  /**
+   * 用户点击确定按钮，提交车牌号
+   */
+  cardNoSubmit: function () {
+    //将省市简称和车牌号拼接之后，传给上一个页面
+    var finalnumber = this.data.region + this.data.cardnumber;
+    var uId = this.data.userId;
+    var pages = getCurrentPages();
+    var prevPage = pages[pages.length - 2]; //上一个页面 
+    //直接调用上一个页面的setData()方法，把数据存到上一个页面中去
+    prevPage.setData({
+      numberPlate: finalnumber
+    })
+    wx.navigateBack()
+    wx.request({
+      url: url+'modifyCard',
+      header: {
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      method: "POST",
+      data: {
+        userId: uId,
+        cardNumber: finalnumber,
+      },
+      success: function (res) {
+        console.log("修改成功");
+      },
+      fail: function () {
+        console.log("修改失败");
+      }
+    });
+  }
+
+
+})

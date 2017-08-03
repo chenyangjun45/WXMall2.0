@@ -1,0 +1,21 @@
+<!--pages/user/nicknameChange/nicknameChange.wxml-->
+<view class="container">
+   <view class="interval"></view>
+
+   <form bindsubmit="changeName">
+      <view class="input-module">
+         <text class="text">昵称：</text>
+         <input class="nick-input" placeholder="请输入昵称" bindinput="bindKeyInput" value="{{nick}}" maxlength="20" />
+         <block wx:if="{{nick!=''}}">
+            <image bindtap="clrarInput" class="nick-image" src="../../../images/close1.png"></image>
+         </block>
+      </view>
+      <view class="interval"></view>
+      <block wx:if="{{nick===''}}">
+         <button class="btn" form-type="submit">确定</button>
+      </block>
+      <block wx:if="{{nick!=''}}">
+         <button class="btn-show" form-type="submit">确定</button>
+      </block>
+   </form>
+</view>

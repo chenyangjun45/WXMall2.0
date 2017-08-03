@@ -1,0 +1,71 @@
+<!--pages/store/integral1/integral1.wxml-->
+<view class="contain">
+   <view class="index">
+      <view class="regular" bindtap="turnRule">
+         <image class="image-hv" src="../../../images/integral.png" />
+         <view class="regular-text">积分规则</view>
+      </view>
+      <view class="title">我的积分</view>
+      <view class="num">{{num}}</view>
+      <view class="message">
+         <view class="integral left">快过期积分：{{quick}}分</view>
+         <view class="integral">未生效积分：{{unuse}}分</view>
+      </view>
+      <button bindtap="turnStore" class="btn bt">进入积分商城</button>
+   </view>
+   <view class="integral-message">
+      <view class="message">
+         <view class="message-left">
+            <view class="first-child">0</view>
+            <view class="second-child">餐饮积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">影院积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">购物积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">餐饮积分</view>
+         </view>
+         <view class="message-other">
+            <view class="first-child">0</view>
+            <view class="second-child">购物积分</view>
+         </view>
+      </view>
+      <view class="interval"></view>
+      <view class="message">
+         <view class="message-detail">积分明细</view>
+         <view class="message-choose" bindtap="showChoose">
+            筛选<text class="choose-right"></text>
+         </view>
+      </view>
+   </view>
+   <view class="integral-filtrate" hidden="{{hidden}}">
+      <view class="message">
+         <view class="message-detail">积分明细</view>
+         <view class="message-choose" bindtap="showChoose">
+            筛选<text class="choose-show"></text>
+         </view>
+      </view>
+      <form bindsubmit="searchIntegral">
+         <view class="message-list">
+            <view class="integral-type">选择积分类型</view>
+            <view bindtap="onChangeType" wx:for="{{integralType}}" wx:for-item="integralTypeItem" wx:key="integralTypeItem" class="integral-item {{currentID==idx?'integral-choose':''}}" data-keyword="{{integralTypeItem}}" wx:for-index="idx" data-idx="{{idx}}">
+               {{integralTypeItem}}
+            </view>
+         </view>
+         <view class="message-list boder-none">
+            <view class="integral-type">选择收支方式</view>
+            <view bindtap="onChangeWay" wx:for="{{payment}}" wx:for-item="paymentItem" wx:key="paymentItem" class="integral-item {{currentId==idx?'integral-choose':''}}" data-keyword="{{integralItem}}" wx:for-index="idx" data-idx="{{idx}}">
+               {{paymentItem}}
+            </view>
+         </view>
+         <button class="btn" form-type="submit">确定</button>
+      </form>
+   </view>
+   <view class="shade" hidden="{{hidden}}"></view>
+</view>

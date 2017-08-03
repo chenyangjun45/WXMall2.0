@@ -1,0 +1,40 @@
+/* pages/store/conversion/conversion.wxss */
+.conversion_item {
+  margin-top: 20rpx;
+  display: flex;
+  background-color: #EEEEEE;
+}
+.img {
+   width: 250rpx;
+   margin-left: 20rpx;
+   margin-top: 20rpx;
+   margin-bottom: 20rpx;
+   align-self: center;
+}
+.list{
+  display: block;
+  margin-left: 10rpx;
+  align-self: center;
+  font-size: 25rpx;
+}
+.flex-details{
+  font-size: 35rpx;
+  font-weight: 800;
+}
+.flex-item{
+  margin-top: 12rpx;
+}
+.right {
+  width: 40rpx;
+  height: 40rpx;
+  padding-right: 15rpx;
+  align-self: center;
+}
+.none{
+  width: 100%;
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  Flex-direction:row;
+  justify-content: center;
+} 
